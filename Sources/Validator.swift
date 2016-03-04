@@ -79,7 +79,7 @@ public class Validator {
 
     /**
     Checks if the seed contains the value
-    
+
     - parameter seed:
     - returns: (String)->Bool
     */
@@ -90,7 +90,7 @@ public class Validator {
 
     /**
     Checks if the seed is equal to the value
-    
+
     - parameter seed:
     - returns: (String)->Bool
     */
@@ -100,7 +100,7 @@ public class Validator {
 
     /**
     Checks if it is the exact length
-    
+
     - parameter length:
     - returns: (String)->Bool
     */
@@ -111,7 +111,7 @@ public class Validator {
 
     /**
     checks if it is valid ascii string
-    
+
     - returns: (String)->Bool
     */
     public static var isASCII: Validation {
@@ -120,7 +120,7 @@ public class Validator {
 
     /**
     checks if it is after the date
-    
+
     - parameter
     - returns:: (String)->Bool
     */
@@ -130,7 +130,7 @@ public class Validator {
 
     /**
     checks if it has only letters
-    
+
     - returns: (String)->Bool
     */
     public static var isAlpha: Validation {
@@ -139,7 +139,7 @@ public class Validator {
 
     /**
     checks if it has letters and numbers only
-    
+
     - returns: (String)->Bool
     */
     public static var isAlphanumeric: Validation {
@@ -148,7 +148,7 @@ public class Validator {
 
     /**
     checks if it a valid base64 string
-    
+
     - returns: (String)->Bool
     */
     public static var isBase64: Validation {
@@ -167,7 +167,7 @@ public class Validator {
 
     /**
     checks if it is boolean
-    
+
     - returns: (String)->Bool
     */
     public static var isBool: Validation {
@@ -176,7 +176,7 @@ public class Validator {
 
     /**
     checks if it is a credit card number
-    
+
     - returns: (String)->Bool
     */
     public static var isCreditCard: Validation {
@@ -185,7 +185,7 @@ public class Validator {
 
     /**
     checks if it is a valid date
-    
+
     - returns: (String)->Bool
     */
     public static var isDate: Validation {
@@ -194,7 +194,7 @@ public class Validator {
 
     /**
     checks if it is an email
-    
+
     - returns: (String)->Bool
     */
     public static var isEmail: Validation {
@@ -203,7 +203,7 @@ public class Validator {
 
     /**
     checks if it is an empty string
-    
+
     - returns: (String)->Bool
     */
     public static var isEmpty: Validation {
@@ -222,7 +222,7 @@ public class Validator {
 
     /**
     checks if it is false
-    
+
     - returns: (String)->Bool
     */
     public static var isFalse: Validation {
@@ -231,7 +231,7 @@ public class Validator {
 
     /**
     checks if it is a float number
-    
+
     - returns: (String)->Bool
     */
     public static var isFloat: Validation {
@@ -240,7 +240,7 @@ public class Validator {
 
     /**
     checks if it is a valid hex color
-    
+
     - returns: (String)->Bool
     */
     public static var isHexColor: Validation {
@@ -249,7 +249,7 @@ public class Validator {
 
     /**
     checks if it is a hexadecimal value
-    
+
     - returns: (String)->Bool
     */
     public static var isHexadecimal: Validation {
@@ -258,7 +258,7 @@ public class Validator {
 
     /**
     checks if it is a valid IP (4|6)
-    
+
     - returns: (String)->Bool
     */
     public static var isIP: Validation {
@@ -267,7 +267,7 @@ public class Validator {
 
     /**
     checks if it is a valid IPv4
-    
+
     - returns: (String)->Bool
     */
     public static var isIPv4: Validation {
@@ -276,7 +276,7 @@ public class Validator {
 
     /**
     checks if it is a valid IPv6
-    
+
     - returns: (String)->Bool
     */
     public static var isIPv6: Validation {
@@ -305,7 +305,7 @@ public class Validator {
 
     /**
     checks if it is a valid integer
-    
+
     - returns: (String)->Bool
     */
     public static var isInt: Validation {
@@ -314,7 +314,7 @@ public class Validator {
 
     /**
     checks if it only has lowercase characters
-    
+
     - returns: (String)->Bool
     */
     public static var isLowercase: Validation {
@@ -323,7 +323,7 @@ public class Validator {
 
     /**
     checks if it is a hexadecimal mongo id
-    
+
     - returns: (String)->Bool
     */
     public static var isMongoId: Validation {
@@ -332,7 +332,7 @@ public class Validator {
 
     /**
     checks if it is numeric
-    
+
     - returns: (String)->Bool
     */
     public static var isNumeric: Validation {
@@ -341,7 +341,7 @@ public class Validator {
 
     /**
     checks if is is a valid phone
-    
+
     - returns: (String)->Bool
     */
     public static func isPhone(locale: String) -> Validation {
@@ -350,7 +350,7 @@ public class Validator {
 
     /**
     checks if it is true
-    
+
     - returns: (String)->Bool
     */
     public static var isTrue: Validation {
@@ -359,7 +359,7 @@ public class Validator {
 
     /**
     checks if it is a valid UUID
-    
+
     - returns: (String)->Bool
     */
     public static var isUUID: Validation {
@@ -368,7 +368,7 @@ public class Validator {
 
     /**
     checks if has only uppercase letter
-    
+
     - returns: (String)->Bool
     */
     public static var isUppercase: Validation {
@@ -394,10 +394,10 @@ public class Validator {
     public static func minLength(length: Int) -> Validation {
         return Validator.defaultValidator.minLength(length)
     }
-    
+
     /**
      watch the validator protocol implementor for changes
-     
+
      -parameter delegate: The validator protocol implementor
      - returns: (String)->Bool
     */
@@ -407,7 +407,7 @@ public class Validator {
 
     /**
     checks if it is not an empty string
-     
+
     - returns: (String)->Bool
     */
     public static var required: Validation {
@@ -485,10 +485,10 @@ public class Validator {
             return value.characters.count == length ? true : false
         }
     }
-    
+
     /**
     checks if it is a valid ascii string
-    
+
     - returns: (String)->Bool
     */
     public var isASCII: Validation {
@@ -531,10 +531,10 @@ public class Validator {
 
         }
     }
-    
+
     /**
     checks if it has only letters
-    
+
     - returns: (String)->Bool
     */
     public var isAlpha: Validation {
@@ -548,10 +548,10 @@ public class Validator {
             return test.evaluateWithObject(value)
         }
     }
-    
+
     /**
     checks if it has letters and numbers only
-    
+
     - returns: (String)->Bool
     */
     public var isAlphanumeric: Validation {
@@ -563,10 +563,10 @@ public class Validator {
             return self.regexTest(Validator.AlphanumericRegex, value)
         }
     }
-    
+
     /**
     checks if it a valid base64 string
-    
+
     - returns: (String)->Bool
     */
     public var isBase64: Validation {
@@ -611,10 +611,10 @@ public class Validator {
 
         }
     }
-    
+
     /**
     checks if it is boolean
-    
+
     - returns: (String)->Bool
     */
     public var isBool: Validation {
@@ -627,10 +627,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a credit card number
-    
+
     - returns: (String)->Bool
     */
     public var isCreditCard: Validation {
@@ -647,10 +647,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a valid date
-    
+
     - returns: (String)->Bool
     */
     public var isDate: Validation {
@@ -670,10 +670,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is an email
-    
+
     - returns: (String)->Bool
     */
     public var isEmail: Validation {
@@ -689,10 +689,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is an empty string
-    
+
     - returns: (String)->Bool
     */
     public var isEmpty: Validation {
@@ -753,10 +753,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is false
-    
+
     - returns: (String)->Bool
     */
     public var isFalse: Validation {
@@ -770,10 +770,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a float number
-    
+
     - returns: (String)->Bool
     */
     public var isFloat: Validation {
@@ -786,10 +786,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a valid hex color
-    
+
     - returns: (String)->Bool
     */
     public var isHexColor: Validation {
@@ -806,10 +806,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a hexadecimal value
-    
+
     - returns: (String)->Bool
     */
     public var isHexadecimal: Validation {
@@ -823,10 +823,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a valid IP (v4 or v6)
-    
+
     - returns: (String)->Bool
     */
     public var isIP: Validation {
@@ -836,10 +836,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a valid IPv4
-    
+
     - returns: (String)->Bool
     */    public var isIPv4: Validation {
         return {
@@ -851,10 +851,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a valid IPv6
-    
+
     - returns: (String)->Bool
     */
     public var isIPv6: Validation {
@@ -916,7 +916,7 @@ public class Validator {
             }
         }
     }
-    
+
     /**
     checks if it is a valid ISBN
 
@@ -969,7 +969,7 @@ public class Validator {
             return false
         }
     }
-    
+
     /**
     checks if the value exists in the supplied array
 
@@ -991,10 +991,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a valid integer
-    
+
     - returns: (String)->Bool
     */
     public var isInt: Validation {
@@ -1007,10 +1007,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it only has lowercase characters
-    
+
     - returns: (String)->Bool
     */
     public var isLowercase: Validation {
@@ -1024,10 +1024,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a hexadecimal mongo id
-    
+
     - returns: (String)->Bool
     */
     public var isMongoId: Validation {
@@ -1040,10 +1040,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is numeric
-    
+
     - returns: (String)->Bool
     */
     public var isNumeric: Validation {
@@ -1055,7 +1055,7 @@ public class Validator {
             return self.regexTest(Validator.NumericRegex, value)
         }
     }
-    
+
     /**
     checks if is is a valid phone
 
@@ -1072,10 +1072,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is true
-    
+
     - returns: (String)->Bool
     */
     public var isTrue: Validation {
@@ -1089,10 +1089,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is a valid UUID
-    
+
     - returns: (String)->Bool
     */
     public var isUUID: Validation {
@@ -1112,10 +1112,10 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it has only uppercase letters
-    
+
     - returns: (String)->Bool
     */
     public var isUppercase: Validation {
@@ -1128,7 +1128,7 @@ public class Validator {
             return value == value.uppercaseString
         }
     }
-    
+
     /**
     checks if the length does not exceed the max length
 
@@ -1144,7 +1144,7 @@ public class Validator {
             return value.characters.count <= length ? true : false
         }
     }
-    
+
     /**
     checks if the length isn't lower than
 
@@ -1161,7 +1161,7 @@ public class Validator {
         }
     }
 
-    
+
     /**
     checks if it is not an empty string
 
@@ -1173,10 +1173,10 @@ public class Validator {
             return value != ""
         }
     }
-    
+
     /**
      watch the validator protocol implementor for changes
-     
+
      -parameter delegate: The validator protocol implementor
      - returns: (String)->Bool
      */
@@ -1215,4 +1215,3 @@ public class Validator {
         return NSPredicate(format: "SELF MATCHES %@", regex).evaluateWithObject(value)
     }
 }
-
