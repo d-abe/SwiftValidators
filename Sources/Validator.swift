@@ -8,6 +8,20 @@
 
 import Foundation
 
+class Regexp  {
+    let internalRegexp: NSRegularExpression
+    let pattern: String
+    init(_ regexp: String) {
+        self.pattern = regexp
+        self.internalRegexp = try! NSRegularExpression( pattern: pattern, options: NSRegularExpressionOptions.CaseInsensitive)
+    }
+
+    func evaluateWithObject(input: String) -> Bool {
+        let matches = self.internalRegexp.matchesInString( input, options: [], range:NSMakeRange(0, input.characters.count) )
+        return matches.count > 0
+    }
+}
+
 public typealias Validation = (String) -> Bool
 
 public protocol ValidatorProtocol {
@@ -544,7 +558,7 @@ public class Validator {
                 return (self.validationMode == .Default ? true : false)
             }
 
-            let test = NSPredicate(format: "SELF MATCHES %@", Validator.ΑlphaRegex)
+            let test = Regexp(Validator.ΑlphaRegex)
             return test.evaluateWithObject(value)
         }
     }
@@ -576,7 +590,7 @@ public class Validator {
                 return (self.validationMode == .Default ? true : false)
             }
 
-            let test = NSPredicate(format: "SELF MATCHES %@", Validator.Βase64Regex)
+            let test = Regexp(Validator.Βase64Regex)
             return test.evaluateWithObject(value)
         }
     }
@@ -640,7 +654,7 @@ public class Validator {
                 return (self.validationMode == .Default ? true : false)
             }
 
-            let test = NSPredicate(format: "SELF MATCHES %@", Validator.CreditCardRegex)
+            let test = Regexp(Validator.CreditCardRegex)
             var clearValue = self.removeDashes(value)
             clearValue = self.removeSpaces(clearValue)
             return test.evaluateWithObject(clearValue)
@@ -684,7 +698,7 @@ public class Validator {
                 return (self.validationMode == .Default ? true : false)
             }
 
-            let emailTest = NSPredicate(format: "SELF MATCHES %@", Validator.ΕmailRegex)
+            let emailTest = Regexp(Validator.ΕmailRegex)
             return emailTest.evaluateWithObject(value)
         }
     }
@@ -799,7 +813,7 @@ public class Validator {
                 return (self.validationMode == .Default ? true : false)
             }
 
-            let test = NSPredicate(format: "SELF MATCHES %@", Validator.HexColorRegex)
+            let test = Regexp(Validator.HexColorRegex)
             let newValue = value.uppercaseString
             let result = test.evaluateWithObject(newValue)
             return result
@@ -1212,6 +1226,6 @@ public class Validator {
     }
 
     private func regexTest(regex: String, _ value: String) -> Bool {
-        return NSPredicate(format: "SELF MATCHES %@", regex).evaluateWithObject(value)
+        return Regexp(regex).evaluateWithObject(value)
     }
 }
